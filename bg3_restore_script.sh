@@ -80,6 +80,15 @@ if [ "$main_choice" == "1" ]; then
 
     echo
     echo -e "${YELLOW}Backup complete!${NC}"
+    echo -e "${YELLOW}Do you want to run the game now? (yes/no)${NC}"
+    echo -n "Default is No. You have 5 seconds to answer: "
+    read -t 5 run_game_answer
+    if [ "$run_game_answer" == "yes" ]; then
+        echo -e "${GREEN}Launching Baldur's Gate 3 via Steam...${NC}"
+        nohup steam steam://rungameid/1086940 >/dev/null 2>&1 &
+    else
+        echo "Not launching the game."
+    fi
     echo "Press Enter to exit..."
     read
     exit 0
@@ -176,6 +185,15 @@ elif [ "$main_choice" == "2" ]; then
 
     echo
     echo -e "${YELLOW}Restore complete! You can now launch BG3.${NC}"
+    echo -e "${YELLOW}Do you want to run the game now? (yes/no)${NC}"
+    echo -n "Default is No. You have 5 seconds to answer: "
+    read -t 5 run_game_answer
+    if [ "$run_game_answer" == "yes" ]; then
+        echo -e "${GREEN}Launching Baldur's Gate 3 via Steam...${NC}"
+        nohup steam steam://rungameid/1086940 >/dev/null 2>&1 &
+    else
+        echo "Not launching the game."
+    fi
     echo "Press Enter to exit..."
     read
     exit 0
