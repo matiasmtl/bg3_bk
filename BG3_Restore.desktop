@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=BG3 Save Restore
+Comment=Restore Baldur's Gate 3 backup saves
+Exec=/home/mat/Desktop/bg3_restore_script.sh
+Icon=applications-games
+Terminal=true
+Categories=Game;
